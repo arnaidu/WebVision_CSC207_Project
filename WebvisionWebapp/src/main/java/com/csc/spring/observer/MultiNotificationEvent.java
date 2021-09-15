@@ -25,10 +25,10 @@ public class MultiNotificationEvent extends ApplicationEvent {
 
     /* Getters */
     public String getMessage() {
-        return message;
+        return this.message;
     }
 
     public Collection<User> getUsers() {
-        return users;
+        return this.users;
     }
 }

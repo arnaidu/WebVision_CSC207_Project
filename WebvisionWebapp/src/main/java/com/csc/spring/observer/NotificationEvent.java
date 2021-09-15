@@ -22,9 +22,9 @@ public class NotificationEvent extends ApplicationEvent {
 
     /* Getters */
     public String getMessage() {
-        return message;
+        return this.message;
     }
     public Long getToUserId() {
-        return toUserId;
+        return this.toUserId;
     }
 }

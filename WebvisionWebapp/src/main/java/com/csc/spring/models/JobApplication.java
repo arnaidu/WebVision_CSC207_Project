@@ -47,18 +47,12 @@ public class JobApplication {
 //            joinColumns = @JoinColumn(name = "job_application_id", referencedColumnName = "job_application_id"),
 //            inverseJoinColumns = @JoinColumn(name = "document_id", referencedColumnName = "document_id")
 //    )
-    private Collection<Document> documents;
+    private Collection<Document> documents; // A collection of all documents for a given application
 
-    public void setDocuments(Collection<Document> documents) {
-        this.documents = documents;
-    }
-
-    public Collection<Document> getDocuments() {
-        return this.documents;
-    }
 
     /**
-     * Create a jobApplication object
+     * Create a jobApplication object. Default of Submitted since we only create object when submitting
+     * the application.
      */
     public JobApplication() {
         this.dateCreated = new Date();
@@ -66,48 +60,52 @@ public class JobApplication {
     }
 
     /* Getter and Setters */
+    public Collection<Document> getDocuments() {
+        return this.documents;
+    }
     public Long getId() {
-        return id;
+        return this.id;
     }
     public Long getJobId() {
-        return jobId;
+        return this.jobId;
+    }
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public String getLastName() {
+        return this.lastName;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+    public String getJobName() {
+        return this.jobName;
+    }
+    public ApplicationStatus getApplicationStatus() { return applicationStatus;}
+    public Date getDateCreated() {
+        return this.dateCreated;
+    }
+
+    public void setDocuments(Collection<Document> documents) {
+        this.documents = documents;
     }
     public void setJobId(Long jobId) {
         this.jobId = jobId;
     }
-    public String getFirstName() {
-        return firstName;
-    }
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-    public String getLastName() {
-        return lastName;
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public String getEmail() {
-        return email;
-    }
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getJobName() {
-        return jobName;
-    }
-
     public void setJobName(String jobName) {
         this.jobName = jobName;
     }
-    public ApplicationStatus getApplicationStatus() {
-        return applicationStatus;
-    }
     public void setApplicationStatus(ApplicationStatus applicationStatus) {
         this.applicationStatus = applicationStatus;
-    }
-    public Date getDateCreated() {
-        return dateCreated;
     }
     public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;

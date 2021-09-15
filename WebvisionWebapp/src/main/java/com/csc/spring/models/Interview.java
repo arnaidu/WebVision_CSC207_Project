@@ -37,13 +37,13 @@ public class Interview {
     public Interview() {}
 
     /**
-     * Create an interview object
-     * @param time
-     * @param company
-     * @param interviewerEmail
-     * @param description
-     * @param applicantEmail
-     * @param job
+     * Create an interview object representing an interviewer
+     * @param time - scheduled time of interview
+     * @param company - company interview is for
+     * @param interviewerEmail - email of interviewer
+     * @param description - information regarding interview
+     * @param applicantEmail - email of applicant scheduled for the interview
+     * @param job - the name of the job title
      */
     public Interview(String time, String company, String interviewerEmail, String description,
                      String applicantEmail, String job) {

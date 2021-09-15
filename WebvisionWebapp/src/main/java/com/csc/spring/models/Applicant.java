@@ -29,7 +29,7 @@ public class Applicant {
             joinColumns = @JoinColumn(name = "applicant_id", referencedColumnName = "applicant_id"),
             inverseJoinColumns = @JoinColumn(name = "job_application_id", referencedColumnName = "job_application_id")
     )
-    private Collection<JobApplication> applications;
+    private Collection<JobApplication> applications; // a collection of job applications for a given applicant
 
     public Applicant() {
         this.applications = new ArrayList<>();
@@ -37,18 +37,21 @@ public class Applicant {
 
 
     /* Getter and Setters */
-    public void setUserId(Long id) { this.userId = id; }
-    public void setId(Long id) { this.id = id; }
-    public void setApplications(Collection<JobApplication> applications) { this.applications = applications; }
     public Long getId() { return this.id; }
     public Long getUserId() { return this.userId; }
     public Collection<JobApplication> getApplications() { return this.applications; }
 
-    /* Methods to add or remove an application */
+    public void setUserId(Long id) { this.userId = id; }
+    public void setId(Long id) { this.id = id; }
+    public void setApplications(Collection<JobApplication> applications) { this.applications = applications; }
+
+
+    /* Add application to list of job applications */
     public void addApplication(JobApplication application) {
         this.applications.add(application);
     }
 
+    /* Remove application from list of job applications */
     public void removeApplication(JobApplication application) {
         this.applications.remove(application);
     }

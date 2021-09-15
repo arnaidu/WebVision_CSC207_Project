@@ -57,7 +57,7 @@ public class HomeView extends CommonView implements BeforeEnterObserver {
     public void setUpView() {
         createGrid();
         createVertLayout();
-        layout.getStyle().set("background", "url(frontend/loginbackground.jpg)");
+        layout.getStyle().set("background", "url(../frontend/loginbackground.jpg)");
         layout.setSizeFull();
         appLayout.setContent(layout);
         add(appLayout);

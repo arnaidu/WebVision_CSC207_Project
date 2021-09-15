@@ -20,7 +20,8 @@ public class MultiEventListener implements ApplicationListener<MultiNotification
     private NotificationService notificationService;
 
     /**
-     * this creates an event listener to handle the case where we want to add notification to a list of users
+     * this creates an event listener to handle the case where we want to add notification to a list of users.
+     * For example, adding a notification about the job posting being closed for all applicants.
      * @param service
      */
     @Autowired
@@ -29,7 +30,8 @@ public class MultiEventListener implements ApplicationListener<MultiNotification
     }
 
     /**
-     * This is like update in observer design pattern, gets called when event is published
+     * This will get called when an event actually happens where we need to add multiple notifications
+     * to the notification board. 
      * @param event
      */
     @Override

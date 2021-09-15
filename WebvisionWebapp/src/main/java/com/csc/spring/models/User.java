@@ -14,7 +14,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "root_user_id")
     private Long id;    // To be user as key in the database
 
     @Column(name = "first_name")
@@ -36,11 +36,11 @@ public class User {
 
     /**
      * Creates a User object keyed by an id as well as email since that is unique
-     * @param firstName
-     * @param lastName
-     * @param email
-     * @param password
-     * @param role
+     * @param firstName - first name of user
+     * @param lastName - last name of user
+     * @param email - email address of user
+     * @param password - password of user
+     * @param role - what type of user (applicant, coordinator, interviewer)
      */
     public User(String firstName, String lastName, String email, String password, String role) {
         this.firstName = firstName;
@@ -50,7 +50,7 @@ public class User {
         this.role = role;
     }
 
-    /* Getters */
+    /* Getters and Setters */
     public String getFirstName() { return this.firstName; }
     public String getLastName() { return this.lastName; }
     public String getEmail() { return this.email; }
@@ -58,7 +58,6 @@ public class User {
     public String getRole() { return this.role; }
     public Long getId() { return this.id; }
 
-    /* Setters */
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
     public void setEmail(String email) { this.email = email; }

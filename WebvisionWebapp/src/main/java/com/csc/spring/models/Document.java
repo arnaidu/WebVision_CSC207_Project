@@ -8,11 +8,11 @@ import javax.print.Doc;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Content is a byte array obtained by reading the InputStream object from document upload
+ */
 @Entity
 @Table(name = "document")
-/**
- * Contents is a byte array obtained by reading the InputStream object from document upload
- */
 public class Document {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,14 +42,16 @@ public class Document {
         this.contents = IOUtils.toByteArray(inputStream);     // uncomment this line if line above has error
     }
 
+    /* Getters and Setters */
     public String getName() {
-        return name;
+        return this.name;
     }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getType() {
+        return this.type;
     }
-
+    public byte[] getContents() {
+        return this.contents;
+    }
     /**
      * Assumes fileName is nonempty
      *
@@ -60,18 +62,13 @@ public class Document {
         return fileName[fileName.length - 1];
     }
 
-    public String getType() {
-        return type;
-    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setType(String type) {
         this.type = type;
     }
-
-    public byte[] getContents() {
-        return contents;
-    }
-
     public void setContents(byte[] contents) {
         this.contents = contents;
     }

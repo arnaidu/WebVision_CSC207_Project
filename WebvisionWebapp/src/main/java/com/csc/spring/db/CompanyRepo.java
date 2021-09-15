@@ -12,7 +12,5 @@ public interface CompanyRepo extends JpaRepository<Company, Long> {
     // Company database model
 
     Company findByName(String name);
-    Company findCompanyByUsers(User user); //added to avoid a view from being empty
-
-    Company findByUsersContaining(User user);
+    Company findCompanyByUsers(User user);
 }

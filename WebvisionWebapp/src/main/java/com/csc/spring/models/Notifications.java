@@ -35,8 +35,8 @@ public class Notifications {
 
     /**
      * Create a Notification Object
-     * @param message
-     * @param toUserId
+     * @param message - message displayed for the user
+     * @param toUserId - which user is receiving the message
      */
     public Notifications(String message, Long toUserId){
 

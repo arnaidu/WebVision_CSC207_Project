@@ -29,7 +29,7 @@ public class EventListener implements ApplicationListener<NotificationEvent> {
     }
 
     /**
-     * This is like update for an observer and will execute once an event is published
+     * This will add a notification to the notification board of a given user
      * @param event
      */
     @Override

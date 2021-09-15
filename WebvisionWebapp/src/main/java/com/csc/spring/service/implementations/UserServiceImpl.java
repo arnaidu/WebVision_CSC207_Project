@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
      */
 
     @Autowired
-    UserRepo userRepo;  // Inject the database controller.
+    private UserRepo userRepo;  // Inject the database controller.
 
     /**
      * @param email
@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User findByEmail(String email) {
-        User user = userRepo.findByEmail(email);
+        User user = this.userRepo.findByEmail(email);
 
         if (user == null) {
             return null;
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User save(User user) {
-        return userRepo.save(user);
+        return this.userRepo.save(user);
     }
 
     /**
@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public void delete(User user){
-        userRepo.delete(user);
+        this.userRepo.delete(user);
     }
 
     /**
@@ -58,11 +58,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(String email) {
 
-        User user = userRepo.findByEmail(email);
+        User user = this.userRepo.findByEmail(email);
 
         if (user == null) return;   // If the user doesn't exist
 
-        userRepo.delete(user);
+        this.userRepo.delete(user);
     }
 
     /**
@@ -70,11 +70,11 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public Collection<User> getAll() {
-        return userRepo.findAll();
+        return this.userRepo.findAll();
     }
 
     @Override
-    public Collection<User> getAll(String role) {return userRepo.findByRole(role);}
+    public Collection<User> getAll(String role) {return this.userRepo.findByRole(role);}
 
 
     /**
