@@ -15,7 +15,7 @@ public class ApplicantAppLayout implements WebLayout {
     public AppLayout createAppLayout() {
 
         AppLayout appLayout = new AppLayout();
-        Image img = new Image("", "Webvision");
+        Image img = new Image("frontend/logo.png", "Webvision");
         img.setHeight("50px");
         appLayout.setBranding(img);
 

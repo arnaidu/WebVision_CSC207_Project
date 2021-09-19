@@ -35,10 +35,10 @@ public class CommonView extends VerticalLayout {
     public void refreshView() {
         System.out.println(CurrentUser.currentUser.getRole());
         this.appLayout = factory.getLayout(CurrentUser.currentUser.getRole());
-        Image img = new Image("frontend/logo.PNG", "logo");
-        img.setWidth("35px");
-        img.setHeight("30px");
-        appLayout.setBranding(img);
+        //Image img = new Image("frontend/logo.png", "logo");
+        //img.setWidth("35px");
+        //img.setHeight("30px");
+        //appLayout.setBranding(img);
     }
 
 

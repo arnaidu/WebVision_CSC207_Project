@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.vaadin.olli.FileDownloadWrapper;
 
+import javax.validation.constraints.Null;
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 
@@ -58,11 +59,13 @@ public class ApplicationHistoryView extends CommonView {
 
         grid.asSingleSelect().addValueChangeListener(event -> {
             selectedApp = grid.asSingleSelect().getValue();
-            downloadFiles.setEnabled(true);
+            downloadFiles.setEnabled(false);
             ArrayList<Document> documents = new ArrayList<>(jobApplicationService.getDocuments(selectedApp));
+            System.out.println(documents);
             ArrayList<String> fileNames = jobApplicationService.getFileNames(selectedApp);
             documentGrid.setColumns("name");
             documentGrid.setItems(documents);
+
             VerticalLayout downloadButtons = new VerticalLayout();
             for (int i = 0; i < documents.size(); i++) {
                 Button downloadButton = new Button("Download " + fileNames.get(i));
@@ -72,8 +75,12 @@ public class ApplicationHistoryView extends CommonView {
                 buttonWrapper.wrapComponent(downloadButton);
                 downloadButtons.add(buttonWrapper);
             }
+
             layout.add(documentGrid, downloadButtons);
+
+
         });
+
 
         updateGrid();
     }

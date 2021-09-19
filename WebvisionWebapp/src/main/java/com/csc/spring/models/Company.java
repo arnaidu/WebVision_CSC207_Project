@@ -23,7 +23,7 @@ public class Company {
             joinColumns = @JoinColumn(
                     name = "company_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "root_user_id")
+                    name = "user_id", referencedColumnName = "id")
     )
     private Collection<User> users;     // A collection of all users associated with this company
 

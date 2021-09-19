@@ -14,7 +14,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "root_user_id")
+    @Column(name = "id")
     private Long id;    // To be user as key in the database
 
     @Column(name = "first_name")
