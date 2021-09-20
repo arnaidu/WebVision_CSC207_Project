@@ -1,5 +1,5 @@
 # WebVision csc207 Project 
--- If you have any questions regarding the project, you can inquire by contacting me at "anil.r.naidu@gmail.com".
+-- If you have any questions regarding the project, you can inquire by contacting me at anil.r.naidu@gmail.com.
 ## RUNNING APPLICATION
 
 The files will need to opened up in an IDE as I am currently unable to properly package it into a .jar file.
