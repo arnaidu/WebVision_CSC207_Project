@@ -1,5 +1,14 @@
 # WebVision csc207 Project 
 -- If you have any questions regarding the project, you can inquire by contacting me at anil.r.naidu@gmail.com.
+
+As an aside, I would recommend just looking through the code as there is no .jar file yet, which makes it hard to run without an
+IDE, specifically IntelliJ. The path to where the java files are is `WebvisionWebapp/src/main/java/com/csc/spring`. This is where the implementations
+and the Application.java file is located if you want to run this file (not in a terminal but an IDE to have the project run properly). I might
+come back to this project to fix it later, but I am more focused on job applications, React, Django, Machine Learning, and other more modern and
+relevant things right now. This is why I recommend looking at the code only for learning purposes. In terms of the .jar file, apparently there are
+issues with how IntelliJ builds this file, and maybe I have some files in wrong folder locations, but I may look into this some more when I have 
+some spare time. 
+
 ## RUNNING APPLICATION
 
 The files will need to opened up in an IDE as I am currently unable to properly package it into a .jar file.
@@ -7,10 +16,6 @@ There are some issues, probably with how this IDE reads file locations, and I do
 figure this out as I want to move past this older project. The IDE used for this project was IntelliJ. 
 There may be a need to right click on pom.xml in order to add it as a maven project. When everything is set up
 then you can run the Application.java within the IDE. Running this from a terminal won't work.
-
-Note: The path to where the java files are is `WebvisionWebapp/src/main/java/com/csc/spring`. This is where the implementation is
-and the Application.java file to run if you want. Again, do not run in a terminal, as there is no .jar file as yet. I might
-come back to this to fix it later, but I am more focused on job applications right now.
 
 Run the application and wait for Java spring to open
 and start the project. If there are no errors you should be notified on the console that
